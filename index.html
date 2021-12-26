@@ -5,781 +5,591 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Exquisite Cafe</title>
+    <title>W/LD FLOWER</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <style>
-        body {
-            background-color: #3a4a58;
-            color: #8c8c8c;
-            font-family: "Open Sans", Arial, Helvetica, sans-serif;
-            font-size: 17px;
-            font-weight: 400;
-            padding: 15px;
-            margin: 0;
-        }
-        
-        .tm-container {
-            max-width: 640px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .tm-main-content {
-            background-color: #ffffff;
-        }
-        
-        .tm-text-white {
-            color: white;
-        }
-        
-        .tm-page-header-container {
-            text-align: center;
-        }
-        
-        .tm-page-header {
-            display: inline-block;
-            vertical-align: baseline;
-            margin: 10% 0;
-            font-size: 2.1rem;
-            font-weight: 400;
-        }
-        
-        .tm-page-icon {
-            display: inline-block;
-            vertical-align: baseline;
-            padding: 15px;
-            font-family: 'Font Awesome\ 5 Free';
-            font-weight: 900;
-        }
-        
-        .tm-section-header {
-            color: #996633;
-            text-align: center;
-            font-weight: 400;
-            font-size: 1.5rem;
-            margin-top: 30px;
-            margin-bottom: 30px;
-        }
-        
-        table {
+        .block-one {
             width: 100%;
-            border-spacing: 0;
-            margin: auto;
-            border-collapse: unset;
+            height: 550px;
+            background: url("./img/block-1-bg.png") top center no-repeat;
+            background-size: cover;
+            position: relative;
         }
         
-        td {
-            text-align: center;
-            padding: 10px 15px;
+        .block-one:before {
+            content: "";
+            background: rgba(255, 255, 255, 0.8);
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
         }
         
-        .tm-text-left {
-            text-align: left;
-            padding-left: 0;
+        .navbar {
+            z-index: 10;
+            background-color: rgba(255, 255, 255, 0);
         }
         
-        tr>th {
-            color: #333333;
-            font-weight: 400;
-            font-size: 15px;
-            text-align: center;
-        }
-        
-        tr:nth-child(odd) {
-            background-color: #e5e8ed;
-        }
-        
-        tr.tm-tr-header {
-            background-color: #c4cdd6;
-            height: 50px;
-        }
-        
-        .tm-section {
-            padding-top: 20px;
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-bottom: 30px;
-        }
-        
-        .tm-section-small {
-            max-width: 490px;
-            margin-left: auto;
-            margin-right: auto;
-            padding-top: 0;
-        }
-        
-        p {
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-        
-        .tm-mb-0 {
-            margin-bottom: 0;
-        }
-        
-        img {
-            max-width: 100%;
-        }
-        
-        figure {
+        .navbar-default {
+            border-color: rgba(255, 255, 255, 0);
+            height: 200px;
+            display: flex;
+            align-items: center;
             margin: 0;
         }
         
-        figcaption {
+        .logo img {
+            max-width: 100px;
+            max-height: 100px;
+        }
+        
+        .x-center {
             text-align: center;
         }
         
-        figcaption span {
-            display: block;
-            color: #333333;
-            font-size: 18px;
-        }
-        
-        .tm-item-name {
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-        
-        .tm-special-items {
+        .y-center {
             display: flex;
-            margin-left: -15px;
-            margin-right: -15px;
+            align-items: center;
         }
         
-        .tm-special-item {
-            padding-left: 15px;
-            padding-right: 15px;
+        .navbar>.container .navbar-brand,
+        .navbar>.container-fluid .navbar-brand {
+            text-align: center;
+            height: 100%;
+        }
+        
+        .navbar-default .navbar-brand,
+        .navbar-default .navbar-nav>li>a {
+            color: rgba(0, 0, 0, 1);
+            font-weight: bold;
+        }
+        
+        .navbar-default .navbar-nav>a,
+        .navbar-default .navbar-nav>a:focus,
+        .navbar-default .navbar-nav>a:hover {
+            color: rgba(0, 0, 0, 1);
+            background-color: rgba(255, 255, 255, 0);
+        }
+        
+        .transparent-block {
+            background-color: rgba(255, 255, 255, 0);
+        }
+        
+        .transparent-block-1 {
+            height: 350px;
+            color: rgba(0, 0, 0, 1);
+        }
+        
+        .transparent-block-1 h1 {
+            font-size: 50px;
+            margin: 30px;
+        }
+        
+        .transparent-block-1 p {
+            font-size: 5px;
+            font-weight: bold;
+            margin: 5px;
+        }
+        
+        .color-block-1 {
+            height: 100px;
+            background-color: rgba(81, 92, 78, 1);
+            color: #ffffff;
+            font-weight: bold;
+        }
+        
+        .color-block-1 p {
+            margin: 5px;
+        }
+        
+        .block-two {
+            width: 100%;
+            height: 650px;
+            background: url("./img/block-2-bg.png") top center no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        
+        .block-two .container,
+        .block-two .row {
+            height: 100%;
+        }
+        
+        .block-two .contain {
+            height: 50%;
+            background-color: #ffffff;
+            padding: 0;
+        }
+        
+        .block-two .box {
+            height: 80%;
+            width: 100%;
+            display: inline-block;
+            background-color: #ffffff;
+            padding: 20px;
+        }
+        
+        .block-two .box2 {
+            border-left: 1px solid rgba(0, 0, 0, 1);
+            border-right: 1px solid rgba(0, 0, 0, 1);
+        }
+        
+        .block-two .box .title,
+        .block-two .box h5 {
+            font-weight: bold;
+            font-size: 16px;
+            height: 20%;
+        }
+        
+        .block-two .box .information {
+            font-weight: bold;
+            height: 70%;
+        }
+        
+        .block-two .box .unt {
+            color: rgba(206, 191, 103, 1);
+            height: 10%;
+        }
+        
+        .block-three {
+            width: 100%;
+            height: 300px;
+            background: url("./img/block-3-bg.png") top center no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        
+        .block-three .text {
+            font-weight: bold;
+        }
+        
+        .block-three .text h3 {
+            font-weight: bold;
+            margin-top: 60px;
+            margin-bottom: 40px;
+        }
+        
+        .carousel-control {
+            text-shadow: none;
+            opacity: 1;
+            width: 5%;
+        }
+        
+        .carousel-control span {
+            font-size: 50px;
+            color: rgba(0, 0, 0, 1);
+        }
+        
+        .carousel-control.left,
+        .carousel-control.right {
+            background-image: none;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .block-four {
+            width: 100%;
+            height: 600px;
+            background: url("./img/block-4-bg.png") top center no-repeat;
+            background-size: cover;
+            position: relative;
         }
         
         hr {
-            width: 60%;
-            border: 0.5px solid #ccc;
+            border-top: 2px solid #000;
+            width: 50px;
         }
         
-        .tm-social-icons {
-            text-align: center;
-            margin-top: 30px;
+        .title-four {
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 80px;
         }
         
-        .tm-social-icons i {
-            font-size: 1.2rem;
+        .thumbnail {
+            border: none;
+            padding: 0 20px;
+            height: 300px;
+            margin-bottom: 50px;
+            text-align: -webkit-center;
         }
         
-        .tm-social-link-container {
-            display: inline-block;
+        .img {
+            height: 250px;
+            width: 250px;
         }
         
-        .tm-social-link {
-            color: white;
-            background-color: #c5ced8;
-            border-radius: 2px;
-            width: 35px;
-            height: 35px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 3px;
-            text-decoration: none;
-            transition: all 0.3s ease;
+        .thumbnail img {
+            max-height: 250px;
+            max-width: 250px;
         }
         
-        .tm-social-link:hover {
-            background-color: #808e9e;
-        }
-        
-        .tm-contact-link {
-            color: #333333;
-            font-weight: 600;
-            text-decoration: none;
-        }
-        
-        a {
-            transition: all 0.3s ease;
-        }
-        
-        .tm-contact-link:hover {
-            color: #808e9e;
-        }
-        
-        .tm-footer-text {
-            font-size: 0.9rem;
-            margin-top: 30px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        
-        .tm-footer-link {
-            color: #fff;
-            text-decoration: none;
-        }
-        
-        .tm-footer-link:hover {
-            color: #c5ced8;
-        }
-        
-        .btn-ham {
-            background-color: #ffffff;
-            color: #3a4a58;
-        }
-        
-        .mytooltip {
-            display: inline;
-            position: relative;
-            z-index: 999
-        }
-        
-        .mytooltip .tooltip-item {
-            cursor: pointer;
-            display: inline-block;
-            font-weight: 500;
-            padding: 0 10px
-        }
-        
-        .mytooltip .tooltip-content {
-            position: absolute;
-            z-index: 9999;
-            width: 360px;
-            left: 50%;
-            margin: 0 0 20px -180px;
-            bottom: 100%;
+        .thumbnail .caption {
             text-align: left;
-            font-size: 14px;
-            line-height: 30px;
-            -webkit-box-shadow: -5px -5px 15px rgba(48, 54, 61, 0.2);
-            box-shadow: -5px -5px 15px rgba(48, 54, 61, 0.2);
-            opacity: 0;
-            cursor: default;
-            pointer-events: none;
-            background: rgba(43, 43, 43, 0.8);
-            border-radius: 5px;
-            border-collapse: unset;
-            padding: 5px;
-			display:flex;
-			align-items:center;
+            font-weight: bold;
+            width: 80%;
         }
         
-        .mytooltip .tooltip-content::after {
-            content: '';
-            top: 100%;
-            left: 50%;
-            border: solid transparent;
-            height: 0;
-            width: 0;
-            position: absolute;
-            pointer-events: none;
-            border-color: rgba(43, 43, 43, 0.8) transparent transparent;
-            border-width: 10px;
-            margin-left: -10px
+        .btn-pay {
+            background-color: #ffffff;
+            color: rgba(0, 0, 0, 1);
+            font-size: 10px;
+            font-weight: bold;
+            border: 2px solid rgba(0, 0, 0, 1);
+            border-radius: 0;
+            width: 40%;
+            padding: 3px;
+            transition: 0.5s;
         }
         
-        .mytooltip .tooltip-content img {
+        .btn-pay:focus,
+        .btn-pay:hover {
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 1);
+            border: 2px solid #ffffff;
+        }
+        
+        .block-five {
+            width: 100%;
+            height: 500px;
+            background: url("./img/block-5-bg.png") top center no-repeat;
+            background-size: cover;
             position: relative;
-            max-height: 140px;
-            max-width: 100%;
-            display: block;
-            float: left;
-            margin-right: 1em;
-            text-align: center;	
         }
         
-        .mytooltip .tooltip-item::after {
-            content: '';
-            position: absolute;
-            width: 360px;
-            height: 20px;
-            bottom: 100%;
-            left: 50%;
-            pointer-events: none;
-            -webkit-transform: translateX(-50%);
-            transform: translateX(-50%)
+        .block-five .text {
+            display: inline-grid;
+            align-items: center;
+            height: 80%;
+            width: 60%;
+            color: rgba(213, 173, 111, 1);
+            padding: 0 15px;
         }
         
-        .mytooltip:hover .tooltip-item::after {
-            pointer-events: auto
+        .block-five .text h1 {
+            margin-top: 60px;
+            margin-bottom: 0;
+            font-weight: bold;
         }
         
-        .mytooltip:hover .tooltip-content {
-            pointer-events: auto;
-            opacity: 1;
-            -webkit-transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0deg);
-            transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0deg)
+        .block-five .text p {
+            margin: -50px 0;
+            font-weight: bold;
         }
         
-        .mytooltip:hover .tooltip-content2 {
-            opacity: 1;
-            font-size: 18px
+        .block-five .input .form-group {
+            display: flex;
         }
         
-        .mytooltip .tooltip-text {
+        .form-control {
+            background-color: rgba(93, 92, 88, 1);
+            color: #ffffff;
+            border: 3px solid #fff;
+            border-radius: 0;
+        }
+        
+        .btn-form {
+            background-color: rgba(78, 90, 80, 1);
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 0;
+            width: 80%;
+        }
+        
+        #footer {
+            height: 30px;
+            background: rgba(78, 90, 80, 1);
+            color: #ffffff;
             font-size: 14px;
-            line-height: 24px;
-            display: block;
-            padding: 1.31em 1.21em 1.21em 0;
-            color: #fff
+            text-align: center;
+            display: flex;
+            align-items: center;
         }
         
-        @media (max-width: 550px) {
-            .tm-special-item {
-                padding-left: 10px;
-                padding-right: 10px;
+        @media screen and (max-width:767px) {
+            .xs-30 {
+                width: 30%;
             }
-            .tm-special-items {
-                margin-left: -10px;
-                margin-right: -10px;
+            .xs-40 {
+                width: 40%;
             }
-            .mytooltip {
-                display: inline;
-                position: relative;
-                z-index: 999
+            .transparent-block-1 p {
+                font-size: 13px;
             }
-            .tooltip-content,
-            .tooltip-content::after,
-            .tooltip-content img,
-            .tooltip-item::after,
-            .tooltip-content2,
-            .tooltip-text,
-            .mytooltip .tooltip-content {
-                opacity: 0;
-                background: rgba(43, 43, 43, 0);
-                box-shadow: none;
+            .block-three {
+                height: 500px;
             }
-        }
-        
-        @media (max-width: 480px) {
-            .tm-special-item {
-                padding-left: 5px;
-                padding-right: 5px;
+            .block-three .text {
+                padding: 0 40px;
             }
-            .tm-special-items {
-                margin-left: -5px;
-                margin-right: -5px;
+            .carousel-control {
+                width: 10%;
+                padding: 5px;
             }
-        }
-        
-        @media (max-width: 430px) {
-            .tm-responsive-table {
-                overflow-x: auto;
+            .carousel-control span {
+                font-size: 30px;
             }
-            table {
-                width: auto;
+            .block-four {
+                height: 1400px;
             }
-            .tm-special-items {
-                flex-direction: column;
-            }
-            .tm-special-item {
-                margin-bottom: 40px;
-            }
-            figcaption p {
+            .thumbnail {
                 margin-bottom: 0;
-                line-height: 1;
+            }
+            .xs-mb30 {
+                margin-bottom: 30px;
+            }
+            .block-five .text p {
+                margin: 0;
+            }
+            .btn-form {
+                width: 100%;
             }
         }
-		
-            #footer {
-                color: #ffffff;
-                font-size: 14px;
-                text-align: center;
-                padding: 30px 0;
-            }
-        
-            #footer .copyright {
-                margin: 0 0 5px 0;
-            }
-		
     </style>
 </head>
+
 <body>
-    <div class="tm-page-header-container tm-container">
-        <div class="row">
-            <div class="col-xs-3" style="width: 23%;"></div>
-            <div class="col-xs-6" style="width: 54%;">
-                <div class="center">
-                    <p class="tm-text-white tm-page-header">
-                        <span class="fas fa fa-coffee"></span> Exquisite Cafe</p>
+
+
+    <div class="block-one">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container y-center">
+                <div class="col-sm-5 xs-30">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">相關</a></li>
+                        <li><a href="#">關於</a></li>
+                        <li><a href="#">聯絡我們</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2 xs-40 x-center" style="margin: 0 10%;">
+                    <a class="navbar-brand logo" href="#"><img src="./img/logo.png"></a>
+                </div>
+                <div class="col-sm-5 xs-30">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">商品簡述</a></li>
+                        <li><a href="#">規格</a></li>
+                        <li><a href="#">配送說明</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="col-xs-3" style="width: 23%;">
-                
+        </nav>
+
+        <div class="transparent-block transparent-block-1 y-center">
+            <div class="col-xs-12 col-sm-6 col-sm-offset-3 x-center">
+                <h1>W/LD FLOWER</h1>
+                <p>眉筆、眉粉、眉刷三合一功能3步踩輕鬆打造立</p>
+                <p>體美人眉。添加木瓜果實和楊桃葉萃取物美容液</p>
             </div>
         </div>
-      
     </div>
 
 
-    <div class="container tm-container tm-main-content">
-        <div class="box" style="margin: 30px;">
-            <div class="row" style="margin: 0;">
-                <img src="img/cafe-01.png">
-            </div>
+    <div class="color-block-1 y-center">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 x-center">
+            <p>詳細介紹</p>
+            <p>此為廠商直送 商品預計出貨日2-5天</p>
+        </div>
+    </div>
 
+
+    <div class="block-two">
+        <div class="container y-center">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 contain x-center">
+                <div class="col-xs-4 y-center" style="height: 100%; padding: 0;">
+                    <div class="box box1">
+                        <div class="title">
+                            <h5>商品簡述</h5>
+                        </div>
+                        <div class="information">
+                            <p>專為快速變換指彩設計終結亮片指彩灘卸困擾</p>
+                        </div>
+                        <div class="unt">
+                            <p>UNT</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4 y-center" style="height: 100%; padding: 0;">
+                    <div class="box box2">
+                        <div class="title">
+                            <h5>品牌</h5>
+                        </div>
+                        <div class="information">
+                            <p>UNT南韓9 x 3.6 x 3.6cm</p>
+                        </div>
+                        <div class="unt">
+                            <p>UNT</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4 y-center" style="height: 100%; padding: 0;">
+                    <div class="box box3">
+                        <div class="title">
+                            <h5>適合</h5>
+                        </div>
+                        <div class="information">
+                            <p>無油商品 不對經基苯甲酸酯(特定防腐劑)</p>
+                        </div>
+                        <div class="unt">
+                            <p>UNT</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="block-three">
+        <div class="container">
             <div class="row">
-                <div class="tm-section-header">COFFEE MENU</div>
-                <table>
-                    <tr class="table-title" style="background-color: rgba(129, 125, 145, 1); color: #FFFFFF;">
-                        <td></td>
-                        <td>HOT</td>
-                        <td>ICED</td>
-                    </tr>
-                    <tr>
-                        <td class="tm-text-left">
-                            <span class="mytooltip tooltip-effect-1">
-                                <span class="tooltip-item">Espresso</span>
-                            <span class="tooltip-content clearfix"> 
-                                    
-                                    <div class="col-xs-6">
-                                        <img src="img/espresso.jpg"> 
-                                    </div>
-                                    <div class="col-xs-6">
-                                        <span class="tooltip-text">Espresso coffee is made by using very finely ground or slightly finely ground coffee powder with high heat and high pressure water.</span>
-            </div>
-            </span>
-            </span>
-            </td>
-            <th>$50</th>
-            <th>$50</th>
-            </tr>
-            <tr>
-                <td class="tm-text-left">
-                    <span class="mytooltip tooltip-effect-1">
-                                <span class="tooltip-item">Cafè Americano</span>
-                    <span class="tooltip-content clearfix"> 
-                                    
-                                    <div class="col-xs-6">
-                                        <img src="img/cafè americano.jpg"> </div>
-                                    <div class="col-xs-6">
-                                        <span class="tooltip-text">It is usually made by adding hot water to espresso coffee or an espresso machine. After extracting the espresso, let the machine supply water until it is complete.</span>
-        </div>
-        </span>
-        </span>
-        </td>
-        <th>$60</th>
-        <th>$60</th>
-        </tr>
-        <tr>
-            <td class="tm-text-left">
-                <span class="mytooltip tooltip-effect-1">
-                                <span class="tooltip-item">Cafè Latte</span>
-                <span class="tooltip-content clearfix"> 
-                                    
-                                    <div class="col-xs-6">
-                                        <img src="img/LATTEE.jpg"> 
-                                    </div>
-                                    <div class="col-xs-6">
-                                        <span class="tooltip-text">The composition of a general latte is one-third of espresso, two-thirds of fresh milk, and a little milk froth. Compared with cappuccino, it has more fresh milk flavor.</span>
-    </div>
-    </span>
-    </span>
-    </td>
-    <th>$55</th>
-    <th>$55</th>
-    </tr>
-    <tr>
-        <td class="tm-text-left">
-            <span class="mytooltip tooltip-effect-1">
-                                <span class="tooltip-item">Mocha</span>
-            <span class="tooltip-content clearfix"> 
-                                    
-                                    <div class="col-xs-6">
-                                        <img src="img/Mocha_coffee.jpg"> 
-                                    </div>
-                                    <div class="col-xs-6">
-                                        <span class="tooltip-text">It is usually made from one-third of espresso and two-thirds of milk froth, but it also adds a small amount of chocolate.</span>
-            </div>
-            </span>
-            </span>
-        </td>
-        <th>$60</th>
-        <th>$60</th>
-    </tr>
-    <tr>
-        <td class="tm-text-left">
-            <span class="mytooltip tooltip-effect-1">
-                                <span class="tooltip-item">Cappuccino</span>
-            <span class="tooltip-content clearfix"> 
-                                    
-                                    <div class="col-xs-6">
-                                        <img src="img/cappuccino.jpg"> 
-                                    </div>
-                                    <div class="col-xs-6">
-                                        <span class="tooltip-text">The difference between cappuccino and latte is the addition of milk froth, and the recipe is 1:1:1 for espresso, fresh milk and milk froth.</span>
-            </div>
-            </span>
-            </span>
-        </td>
-        <th>$60</th>
-        <th>$60</th>
-    </tr>
-    <tr>
-        <td class="tm-text-left">
-            <span class="mytooltip tooltip-effect-1">
-                                <span class="tooltip-item">Blue Mountain Coffee</span>
-            <span class="tooltip-content clearfix"> 
-                                    
-                                    <div class="col-xs-6">
-                                        <img src="img/cafe blue.jpg"> 
-                                    </div>
-                                    <div class="col-xs-6">
-                                        <span class="tooltip-text">Blue Mountain coffee is best roasted in a medium-roast method, which can make the oil of the coffee beans surface and burn out a shiny brown.</span>
-            </div>
-            </span>
-            </span>
-        </td>
-        <th>$70</th>
-        <th>$70</th>
-    </tr>
-    <tr>
-        <td class="tm-text-left">
-            <span class="mytooltip tooltip-effect-1">
-                                <span class="tooltip-item">Dutch Coffee</span>
-            <span class="tooltip-content clearfix"> 
-                                    
-                                    <div class="col-xs-6">
-                                        <img src="img/Dutch Coffee.jpg"> 
-                                    </div>
-                                    <div class="col-xs-6">
-                                        <span class="tooltip-text">Using ice cubes to naturally melt into ice water, drop by drop into coffee powder to extract coffee, this process often takes several hours, so the price is more expensive.</span>
-            </div>
-            </span>
-            </span>
-        </td>
-        <th>$70</th>
-        <th>$70</th>
-    </tr>
-    </table>
-    </div>
-    <!-- Row -->
 
-    <div class="row">
-        <div class="tm-section-header">TEA MENU</div>
-        <table>
-            <tr class="table-title" style="background-color: rgba(129, 125, 145, 1); color: #FFFFFF;">
-                <td></td>
-                <td>HOT</td>
-                <td>ICED</td>
-            </tr>
-            <tr>
-                <td class="tm-text-left">
-                    <span class="mytooltip tooltip-effect-1">
-                                <span class="tooltip-item">Black Tea</span>
-                    <span class="tooltip-content clearfix"> 
-                                    
-                                    <div class="col-xs-6">
-                                        <img src="img/Black tea.jpg"> 
-                                    </div>
-                                    <div class="col-xs-6">
-                                        <span class="tooltip-text">Black tea is a kind of fully fermented tea, and it is the main tea product in Chinese tea culture.</span>
-    </div>
-    </span>
-    </span>
-    </td>
-    <th>$40</th>
-    <th>$40</th>
-    </tr>
-    <tr>
-        <td class="tm-text-left">
-            <span class="mytooltip tooltip-effect-1">
-                                <span class="tooltip-item">Assam Black Tea</span>
-            <span class="tooltip-content clearfix"> 
-                                    
-                                    <div class="col-xs-6">
-                                        <img src="img/Assam Black-Tea.jpg"> </div>
-                                    <div class="col-xs-6">
-                                        <span class="tooltip-text">Assam Black tea produced in Assam in northeastern India is a cultivated species of tea trees.</span>
-            </div>
-            </span>
-            </span>
-        </td>
-        <th>$50</th>
-        <th>$50</th>
-    </tr>
-    <tr>
-        <td class="tm-text-left">
-            <span class="mytooltip tooltip-effect-1">
-                                <span class="tooltip-item">Milk Tea</span>
-            <span class="tooltip-content clearfix"> 
-                                    
-                                    <div class="col-xs-6">
-                                        <img src="img/Milk Tea.jpg"> 
-                                    </div>
-                                    <div class="col-xs-6">
-                                        <span class="tooltip-text">A beverage mixed with tea and milk is prepared and drunk. The origin and production method vary depending on the characteristics of each region.</span>
-            </div>
-            </span>
-            </span>
-        </td>
-        <th>$55</th>
-        <th>$55</th>
-    </tr>
-    <tr>
-        <td class="tm-text-left">
-            <span class="mytooltip tooltip-effect-1">
-                                <span class="tooltip-item">Darjeeling</span>
-            <span class="tooltip-content clearfix"> 
-                                    
-                                    <div class="col-xs-6">
-                                        <img src="img/Darjeeling.jpg"> 
-                                    </div>
-                                    <div class="col-xs-6">
-                                        <span class="tooltip-text">Produced in the Darjeeling Plateau in the foothills of the Himalayas in the northern state of West Bengal, India. It is a kind of black tea with a fruity and rich taste.</span>
-            </div>
-            </span>
-            </span>
-        </td>
-        <th>$50</th>
-        <th>$50</th>
-    </tr>
-    <tr>
-        <td class="tm-text-left">
-            <span class="mytooltip tooltip-effect-1">
-                                <span class="tooltip-item">Earl Grey</span>
-            <span class="tooltip-content clearfix"> 
-                                    
-                                    <div class="col-xs-6">
-                                        <img src="img/Earl Gray.png"> 
-                                    </div>
-                                    <div class="col-xs-6">
-                                        <span class="tooltip-text">A flavored tea based on Qimen black tea or Lapsang Souchong, paired with Ceylon black tea, and added with bergamot essential oil.</span>
-            </div>
-            </span>
-            </span>
-        </td>
-        <th>$60</th>
-        <th>$60</th>
-    </tr>
-    <tr>
-        <td class="tm-text-left">
-            <span class="mytooltip tooltip-effect-1">
-                                <span class="tooltip-item">Oolong Tea</span>
-            <span class="tooltip-content clearfix"> 
-                                    
-                                    <div class="col-xs-6">
-                                        <img src="img/Oolong Tea.jpg"> 
-                                    </div>
-                                    <div class="col-xs-6">
-                                        <span class="tooltip-text">Taiwan Oolong Tea, also known as "Half-spherical Baozhong Tea", refers specifically to tea species that are made from "Oolong tea species and processed in the form of oolong tea"</span>
-            </div>
-            </span>
-            </span>
-        </td>
-        <th>$55</th>
-        <th>$55</th>
-    </tr>
-    <tr>
-        <td class="tm-text-left">
-            <span class="mytooltip tooltip-effect-1">
-                                <span class="tooltip-item">English Breakfast Tea</span>
-            <span class="tooltip-content clearfix"> 
-                                    
-                                    <div class="col-xs-6">
-                                        <img src="img/English breakfast tea.jpg"> </div>
-                                    <div class="col-xs-6">
-                                        <span class="tooltip-text">Also known as English breakfast tea, English breakfast tea or English morning tea, it is a classic British black tea blend.</span>
-            </div>
-            </span>
-            </span>
-        </td>
-        <th>$60</th>
-        <th>$60</th>
-    </tr>
-    </table>
-    </div>
-    <!-- Row -->
-
-    <div class="row" style="text-align: center;">
-        <div class="tm-section-header">SPECIAL ITEMS</div>
-        <div class="col-xs-12 col-sm-4">
-            <div class="section-item">
-                <div class="row" style="margin: 0;">
-                    <img src="./img/section-01.jpg">
-                </div>
-                <div class="row" style="text-align: center; margin-top: 10px;">
-                    Coffee Art $45
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-4">
-            <div class="section-item">
-                <div class="row" style="margin: 0;">
-                    <img src="./img/section-02.jpg">
-                </div>
-                <div class="row" style="text-align: center; margin-top: 10px;">
-                    Soft Deli Coffee $40
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-4">
-            <div class="section-item">
-                <div class="row" style="margin: 0;">
-                    <img src="./img/section-03.jpg">
-                </div>
-                <div class="row" style="margin-top: 10px;">
-                    Speciality Tea $35
+                <div id="carousel-id" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="container">
+                                <div class="text x-center">
+                                    <h3>注意事項與付款方式</h3>
+                                    <p>1.商店售出之商品,無法在全台屈臣氏實體門市提供退款、退貨或換貨等服務。</p>
+                                    <p>2.之格及優惠活動僅適用於網路商店:屈臣氏實體門市價格及優惠活動,請以實體門市公告為主。</p>
+                                    <p>3.退換貨商品必須為全新狀態且完整包裝。</p>
+                                    <p>4.每項商品每人限購至多6件:商(贈)品數量有限,(贈)品售(送)完止。</p>
+                                    <p>5.商品圖檔顏色因電腦螢幕設定差異會略有不,以赏際商品顏色為準。</p>
+                                    <p>6.商品内客物以實際出貨為主,若值新薯包裝更替期間,將隨機出貨,敬請見諒。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="container">
+                                <div class="text x-center">
+                                    <h3>注意事項與付款方式</h3>
+                                    <p>1.商店售出之商品,無法在全台屈臣氏實體門市提供退款、退貨或換貨等服務。</p>
+                                    <p>2.之格及優惠活動僅適用於網路商店:屈臣氏實體門市價格及優惠活動,請以實體門市公告為主。</p>
+                                    <p>3.退換貨商品必須為全新狀態且完整包裝。</p>
+                                    <p>4.每項商品每人限購至多6件:商(贈)品數量有限,(贈)品售(送)完止。</p>
+                                    <p>5.商品圖檔顏色因電腦螢幕設定差異會略有不,以赏際商品顏色為準。</p>
+                                    <p>6.商品内客物以實際出貨為主,若值新薯包裝更替期間,將隨機出貨,敬請見諒。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="container">
+                                <div class="text x-center">
+                                    <h3>注意事項與付款方式</h3>
+                                    <p>1.商店售出之商品,無法在全台屈臣氏實體門市提供退款、退貨或換貨等服務。</p>
+                                    <p>2.之格及優惠活動僅適用於網路商店:屈臣氏實體門市價格及優惠活動,請以實體門市公告為主。</p>
+                                    <p>3.退換貨商品必須為全新狀態且完整包裝。</p>
+                                    <p>4.每項商品每人限購至多6件:商(贈)品數量有限,(贈)品售(送)完止。</p>
+                                    <p>5.商品圖檔顏色因電腦螢幕設定差異會略有不,以赏際商品顏色為準。</p>
+                                    <p>6.商品内客物以實際出貨為主,若值新薯包裝更替期間,將隨機出貨,敬請見諒。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="left carousel-control y-center" href="#carousel-id" data-slide="prev"><span class="fa fa-arrow-circle-o-left"></span></a>
+                    <a class="right carousel-control y-center" href="#carousel-id" data-slide="next"><span class="fa fa-arrow-circle-o-right"></span></a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Row -->
 
 
-    <hr>
+    <div class="block-four">
+        <div class="container">
+            <div class="row">
+                <hr>
+                <p class="title-four x-center">商品屬性</p>
+            </div>
+            <div class="row">
 
+                <div class="col-xs-12 col-sm-4">
+                    <div class="thumbnail">
+                        <div class="img y-center">
+                            <img src="./img/thumbnail-img-1.png" alt="">
+                        </div>
+                        <div class="caption">
+                            <p>電子提貨券、電子折價券及寵數折抵。</p>
+                        </div>
+                    </div>
+                    <p class="x-center xs-mb30">
+                        <a href="#" class="btn btn-pay">付款方式</a>
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="thumbnail">
+                        <div class="img y-center">
+                            <img src="./img/thumbnail-img-2.png" alt="">
+                        </div>
+                        <div class="caption">
+                            <p>門市取貨付款(僅限現金或信用卡)。</p>
+                        </div>
+                    </div>
+                    <p class="x-center xs-mb30">
+                        <a href="#" class="btn btn-pay">付款方式</a>
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="thumbnail">
+                        <div class="img y-center">
+                            <img src="./img/thumbnail-img-3.png" alt="">
+                        </div>
+                        <div class="caption">
+                            <p>信用卡粽上刷卡,14家銀行享紅利折抵(限一次付清)。</p>
+                        </div>
+                    </div>
+                    <p class="x-center xs-mb30">
+                        <a href="#" class="btn btn-pay">付款方式</a>
+                    </p>
+                </div>
 
-    <div class="row" style="margin: 0 10%;">
-        <div class="tm-section-header">ABOUT OUR COFFEE</div>
-        <p>Our coffee mainly consists of three original species, Coffea Arabica, Coffea Robusta and Coffea Liberica. Among them, Arabica is mainly used for gen- eral drinking, while Robusta is mainly used for instant coffee.</p>
-        <p>In fact, in recent years, well-care Robusta coffee has also appeared in India. It is grown at high altitudes and is carefully protected from pests, which greatly improves the flavor of Robusta coffee.</p>
+            </div>
+            <!-- Row -->
+        </div>
+        <!--Container -->
     </div>
 
 
-    <hr>
-
-
-    <div class="row" style="text-align: center;">
-        <div class="tm-section-header">TALK TO US</div>
-        <p>You can contact us in the following ways.</p>
+    <div class="block-five">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2" style="height: 100%;">
+            <div class="text">
+                <h1>物流方式</h1>
+                <p>1.郵寄(掛號包裹或快捷)。</p>
+                <p>2.超商(全家)取貨(該訂單品組合需符合門市材限制,請參考備註)超商門市材積限制係指:商品外包裝材積以1材為限(長+寬+高小於90公分)、單邊長度不得超過45公分。</p>
+                <p>3.門市取貨(少部份門市尚未開放)。</p>
+                <p>4.海外直送(目前僅配送至香港、加坡、澳門)。</p>
+            </div>
+            <div class="input">
+                <div class="form-group">
+                    <div class="col-xs-3">
+                        <input type="text" placeholder="" class="form-control">
+                    </div>
+                    <div class="col-xs-3">
+                        <input type="text" placeholder="" class="form-control">
+                    </div>
+                    <div class="col-xs-3">
+                        <input type="text" placeholder="" class="form-control">
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="#" class="btn btn-form">確認</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
-
-    <div class="row" style="text-align: center; margin: 0 10%;">
-
-        <div class="col-xs-6 col-sm-3" style="margin: 10% auto;">
-            <a href="https://facebook.com">
-                <img src="./img/social-01.png" style="max-width: 50%;">
-            </a>
-        </div>
-        <div class="col-xs-6 col-sm-3" style="margin: 10% auto;">
-            <a href="https://www.instagram.com">
-                <img src="./img/social-02.png" style="max-width: 50%;">
-            </a>
-        </div>
-        <div class="col-xs-6 col-sm-3" style="margin: 10% auto;">
-            <a href="https://twitter.com">
-            <img src="./img/social-03.png" style="max-width: 50%;">
-            </a>
-        </div>
-        <div class="col-xs-6 col-sm-3" style="margin: 10% auto;">
-            <a href="https://www.pinterest.com">
-                <img src="./img/social-04.png" style="max-width: 50%;">
-            </a>
-        </div>
-
-    </div>
-      </div>
-    </div>
     <footer id="footer">
-      <div class="container">
+        <div class="container">
             <div class="copyright">
-                &copy; 2021 Copyright <strong><span>Exquisite Cafe</span></strong>. All Rights Reserved
+                W/LD FLOWER
             </div>
-      </div>
-</footer>
-    </div>
+        </div>
+    </footer>
 
-
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
+<!-- <img src="https://picsum.photos/350/200/?random=1"> -->
 
 </html>
