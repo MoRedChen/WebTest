@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>W/LD FLOWER</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        .block-one {
+            width: 100%;
+            height: 550px;
+            background: url("./img/block-1-bg.png") top center no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        
+        .block-one:before {
+            content: "";
+            background: rgba(255, 255, 255, 0.8);
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        
+        .navbar {
+            z-index: 10;
+            background-color: rgba(255, 255, 255, 0);
+        }
+        
+        .navbar-default {
+            border-color: rgba(255, 255, 255, 0);
+            height: 200px;
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
+        
+        .logo img {
+            max-width: 100px;
+            max-height: 100px;
+        }
+        
+        .x-center {
+            text-align: center;
+        }
+        
+        .y-center {
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar>.container .navbar-brand,
+        .navbar>.container-fluid .navbar-brand {
+            text-align: center;
+            height: 100%;
+        }
+        
+        .navbar-default .navbar-brand,
+        .navbar-default .navbar-nav>li>a {
+            color: rgba(0, 0, 0, 1);
+            font-weight: bold;
+        }
+        
+        .navbar-default .navbar-nav>a,
+        .navbar-default .navbar-nav>a:focus,
+        .navbar-default .navbar-nav>a:hover {
+            color: rgba(0, 0, 0, 1);
+            background-color: rgba(255, 255, 255, 0);
+        }
+        
+        .transparent-block {
+            background-color: rgba(255, 255, 255, 0);
+        }
+        
+        .transparent-block-1 {
+            height: 350px;
+            color: rgba(0, 0, 0, 1);
+        }
+        
+        .transparent-block-1 h1 {
+            font-size: 50px;
+            margin: 30px;
+        }
+        
+        .transparent-block-1 p {
+            font-size: 5px;
+            font-weight: bold;
+            margin: 5px;
+        }
+        
+        .color-block-1 {
+            height: 100px;
+            background-color: rgba(81, 92, 78, 1);
+            color: #ffffff;
+            font-weight: bold;
+        }
+        
+        .color-block-1 p {
+            margin: 5px;
+        }
+        
+        .block-two {
+            width: 100%;
+            height: 650px;
+            background: url("./img/block-2-bg.png") top center no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        
+        .block-two .container,
+        .block-two .row {
+            height: 100%;
+        }
+        
+        .block-two .contain {
+            height: 50%;
+            background-color: #ffffff;
+            padding: 0;
+        }
+        
+        .block-two .box {
+            height: 80%;
+            width: 100%;
+            display: inline-block;
+            background-color: #ffffff;
+            padding: 20px;
+        }
+        
+        .block-two .box2 {
+            border-left: 1px solid rgba(0, 0, 0, 1);
+            border-right: 1px solid rgba(0, 0, 0, 1);
+        }
+        
+        .block-two .box .title,
+        .block-two .box h5 {
+            font-weight: bold;
+            font-size: 16px;
+            height: 20%;
+        }
+        
+        .block-two .box .information {
+            font-weight: bold;
+            height: 70%;
+        }
+        
+        .block-two .box .unt {
+            color: rgba(206, 191, 103, 1);
+            height: 10%;
+        }
+        
+        .block-three {
+            width: 100%;
+            height: 300px;
+            background: url("./img/block-3-bg.png") top center no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        
+        .block-three .text {
+            font-weight: bold;
+        }
+        
+        .block-three .text h3 {
+            font-weight: bold;
+            margin-top: 60px;
+            margin-bottom: 40px;
+        }
+        
+        .carousel-control {
+            text-shadow: none;
+            opacity: 1;
+            width: 5%;
+        }
+        
+        .carousel-control span {
+            font-size: 50px;
+            color: rgba(0, 0, 0, 1);
+        }
+        
+        .carousel-control.left,
+        .carousel-control.right {
+            background-image: none;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .block-four {
+            width: 100%;
+            height: 600px;
+            background: url("./img/block-4-bg.png") top center no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        
+        hr {
+            border-top: 2px solid #000;
+            width: 50px;
+        }
+        
+        .title-four {
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 80px;
+        }
+        
+        .thumbnail {
+            border: none;
+            padding: 0 20px;
+            height: 300px;
+            margin-bottom: 50px;
+            text-align: -webkit-center;
+        }
+        
+        .img {
+            height: 250px;
+            width: 250px;
+        }
+        
+        .thumbnail img {
+            max-height: 250px;
+            max-width: 250px;
+        }
+        
+        .thumbnail .caption {
+            text-align: left;
+            font-weight: bold;
+            width: 80%;
+        }
+        
+        .btn-pay {
+            background-color: #ffffff;
+            color: rgba(0, 0, 0, 1);
+            font-size: 10px;
+            font-weight: bold;
+            border: 2px solid rgba(0, 0, 0, 1);
+            border-radius: 0;
+            width: 40%;
+            padding: 3px;
+            transition: 0.5s;
+        }
+        
+        .btn-pay:focus,
+        .btn-pay:hover {
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 1);
+            border: 2px solid #ffffff;
+        }
+        
+        .block-five {
+            width: 100%;
+            height: 500px;
+            background: url("./img/block-5-bg.png") top center no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        
+        .block-five .text {
+            display: inline-grid;
+            align-items: center;
+            height: 80%;
+            width: 60%;
+            color: rgba(213, 173, 111, 1);
+            padding: 0 15px;
+        }
+        
+        .block-five .text h1 {
+            margin-top: 60px;
+            margin-bottom: 0;
+            font-weight: bold;
+        }
+        
+        .block-five .text p {
+            margin: -50px 0;
+            font-weight: bold;
+        }
+        
+        .block-five .input .form-group {
+            display: flex;
+        }
+        
+        .form-control {
+            background-color: rgba(93, 92, 88, 1);
+            color: #ffffff;
+            border: 3px solid #fff;
+            border-radius: 0;
+        }
+        
+        .btn-form {
+            background-color: rgba(78, 90, 80, 1);
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 0;
+            width: 80%;
+        }
+        
+        #footer {
+            height: 30px;
+            background: rgba(78, 90, 80, 1);
+            color: #ffffff;
+            font-size: 14px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+        
+        @media screen and (max-width:767px) {
+            .xs-30 {
+                width: 30%;
+            }
+            .xs-40 {
+                width: 40%;
+            }
+            .block-three {
+                height: 500px;
+            }
+            .block-three .text {
+                padding: 0 40px;
+            }
+            .carousel-control {
+                width: 10%;
+                padding: 5px;
+            }
+            .carousel-control span {
+                font-size: 30px;
+            }
+            .block-four {
+                height: 1400px;
+            }
+            .thumbnail {
+                margin-bottom: 0;
+            }
+            .xs-mb30 {
+                margin-bottom: 30px;
+            }
+            .block-five .text p {
+                margin: 0;
+            }
+            .btn-form {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="block-one">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container y-center">
+                <div class="col-sm-5 xs-30">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">相關</a></li>
+                        <li><a href="#">關於</a></li>
+                        <li><a href="#">聯絡我們</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2 xs-40 x-center" style="margin: 0 10%;">
+                    <a class="navbar-brand logo" href="#"><img src="./img/logo.png"></a>
+                </div>
+                <div class="col-sm-5 xs-30">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">商品簡述</a></li>
+                        <li><a href="#">規格</a></li>
+                        <li><a href="#">配送說明</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="transparent-block transparent-block-1 y-center">
+            <div class="col-xs-12 col-sm-6 col-sm-offset-3 x-center">
+                <h1>W/LD FLOWER</h1>
+                <p>眉筆、眉粉、眉刷三合一功能3步踩輕鬆打造立</p>
+                <p>體美人眉。添加木瓜果實和楊桃葉萃取物美容液</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="color-block-1 y-center">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 x-center">
+            <p>詳細介紹</p>
+            <p>此為廠商直送 商品預計出貨日2-5天</p>
+        </div>
+    </div>
+
+
+    <div class="block-two">
+        <div class="container y-center">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 contain x-center">
+                <div class="col-xs-4 y-center" style="height: 100%; padding: 0;">
+                    <div class="box box1">
+                        <div class="title">
+                            <h5>商品簡述</h5>
+                        </div>
+                        <div class="information">
+                            <p>專為快速變換指彩設計終結亮片指彩灘卸困擾</p>
+                        </div>
+                        <div class="unt">
+                            <p>UNT</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4 y-center" style="height: 100%; padding: 0;">
+                    <div class="box box2">
+                        <div class="title">
+                            <h5>品牌</h5>
+                        </div>
+                        <div class="information">
+                            <p>UNT南韓9 x 3.6 x 3.6cm</p>
+                        </div>
+                        <div class="unt">
+                            <p>UNT</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4 y-center" style="height: 100%; padding: 0;">
+                    <div class="box box3">
+                        <div class="title">
+                            <h5>適合</h5>
+                        </div>
+                        <div class="information">
+                            <p>無油商品 不對經基苯甲酸酯(特定防腐劑)</p>
+                        </div>
+                        <div class="unt">
+                            <p>UNT</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="block-three">
+        <div class="container">
+            <div class="row">
+
+                <div id="carousel-id" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="container">
+                                <div class="text x-center">
+                                    <h3>注意事項與付款方式</h3>
+                                    <p>1.商店售出之商品,無法在全台屈臣氏實體門市提供退款、退貨或換貨等服務。</p>
+                                    <p>2.之格及優惠活動僅適用於網路商店:屈臣氏實體門市價格及優惠活動,請以實體門市公告為主。</p>
+                                    <p>3.退換貨商品必須為全新狀態且完整包裝。</p>
+                                    <p>4.每項商品每人限購至多6件:商(贈)品數量有限,(贈)品售(送)完止。</p>
+                                    <p>5.商品圖檔顏色因電腦螢幕設定差異會略有不,以赏際商品顏色為準。</p>
+                                    <p>6.商品内客物以實際出貨為主,若值新薯包裝更替期間,將隨機出貨,敬請見諒。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="container">
+                                <div class="text x-center">
+                                    <h3>注意事項與付款方式</h3>
+                                    <p>1.商店售出之商品,無法在全台屈臣氏實體門市提供退款、退貨或換貨等服務。</p>
+                                    <p>2.之格及優惠活動僅適用於網路商店:屈臣氏實體門市價格及優惠活動,請以實體門市公告為主。</p>
+                                    <p>3.退換貨商品必須為全新狀態且完整包裝。</p>
+                                    <p>4.每項商品每人限購至多6件:商(贈)品數量有限,(贈)品售(送)完止。</p>
+                                    <p>5.商品圖檔顏色因電腦螢幕設定差異會略有不,以赏際商品顏色為準。</p>
+                                    <p>6.商品内客物以實際出貨為主,若值新薯包裝更替期間,將隨機出貨,敬請見諒。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="container">
+                                <div class="text x-center">
+                                    <h3>注意事項與付款方式</h3>
+                                    <p>1.商店售出之商品,無法在全台屈臣氏實體門市提供退款、退貨或換貨等服務。</p>
+                                    <p>2.之格及優惠活動僅適用於網路商店:屈臣氏實體門市價格及優惠活動,請以實體門市公告為主。</p>
+                                    <p>3.退換貨商品必須為全新狀態且完整包裝。</p>
+                                    <p>4.每項商品每人限購至多6件:商(贈)品數量有限,(贈)品售(送)完止。</p>
+                                    <p>5.商品圖檔顏色因電腦螢幕設定差異會略有不,以赏際商品顏色為準。</p>
+                                    <p>6.商品内客物以實際出貨為主,若值新薯包裝更替期間,將隨機出貨,敬請見諒。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="left carousel-control y-center" href="#carousel-id" data-slide="prev"><span class="fa fa-arrow-circle-o-left"></span></a>
+                    <a class="right carousel-control y-center" href="#carousel-id" data-slide="next"><span class="fa fa-arrow-circle-o-right"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="block-four">
+        <div class="container">
+            <div class="row">
+                <hr>
+                <p class="title-four x-center">商品屬性</p>
+            </div>
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-4">
+                    <div class="thumbnail">
+                        <div class="img y-center">
+                            <img src="./img/thumbnail-img-1.png" alt="">
+                        </div>
+                        <div class="caption">
+                            <p>電子提貨券、電子折價券及寵數折抵。</p>
+                        </div>
+                    </div>
+                    <p class="x-center xs-mb30">
+                        <a href="#" class="btn btn-pay">付款方式</a>
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="thumbnail">
+                        <div class="img y-center">
+                            <img src="./img/thumbnail-img-2.png" alt="">
+                        </div>
+                        <div class="caption">
+                            <p>門市取貨付款(僅限現金或信用卡)。</p>
+                        </div>
+                    </div>
+                    <p class="x-center xs-mb30">
+                        <a href="#" class="btn btn-pay">付款方式</a>
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="thumbnail">
+                        <div class="img y-center">
+                            <img src="./img/thumbnail-img-3.png" alt="">
+                        </div>
+                        <div class="caption">
+                            <p>信用卡粽上刷卡,14家銀行享紅利折抵(限一次付清)。</p>
+                        </div>
+                    </div>
+                    <p class="x-center xs-mb30">
+                        <a href="#" class="btn btn-pay">付款方式</a>
+                    </p>
+                </div>
+
+            </div>
+            <!-- Row -->
+        </div>
+        <!--Container -->
+    </div>
+
+
+    <div class="block-five">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2" style="height: 100%;">
+            <div class="text">
+                <h1>物流方式</h1>
+                <p>1.郵寄(掛號包裹或快捷)。</p>
+                <p>2.超商(全家)取貨(該訂單品組合需符合門市材限制,請參考備註)超商門市材積限制係指:商品外包裝材積以1材為限(長+寬+高小於90公分)、單邊長度不得超過45公分。</p>
+                <p>3.門市取貨(少部份門市尚未開放)。</p>
+                <p>4.海外直送(目前僅配送至香港、加坡、澳門)。</p>
+            </div>
+            <div class="input">
+                <div class="form-group">
+                    <div class="col-xs-3">
+                        <input type="text" placeholder="" class="form-control">
+                    </div>
+                    <div class="col-xs-3">
+                        <input type="text" placeholder="" class="form-control">
+                    </div>
+                    <div class="col-xs-3">
+                        <input type="text" placeholder="" class="form-control">
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="#" class="btn btn-form">確認</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer id="footer">
+        <div class="container">
+            <div class="copyright">
+                W/LD FLOWER
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+<!-- <img src="https://picsum.photos/350/200/?random=1"> -->
+
+</html>
