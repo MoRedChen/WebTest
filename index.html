@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>110-2 Curriculum</title>
+    <link href="favicon.png" rel="icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <!--[if lt IE 9]>
@@ -63,12 +64,6 @@
         
         .progress-clock__time-colon {
             line-height: 1.275;
-        }
-        
-        .progress-clock__time-ampm {
-            font-size: 16px;
-            cursor: default;
-            grid-row: 3;
         }
         
         [data-group]:focus {
@@ -199,7 +194,6 @@
                         <button class="progress-clock__time-digit" data-unit="m" data-group="m" type="button">00</button>
                         <span class="progress-clock__time-colon">:</span>
                         <button class="progress-clock__time-digit" data-unit="s" data-group="s" type="button">00</button>
-                        <span class="progress-clock__time-ampm" data-unit="ap">上午</span>
                     </div>
                     <div href="#" class="thumbnail c-t">
                         <p>第一節</p>
@@ -509,7 +503,7 @@
                         progress: d_progress
                     }, {
                         label: "h",
-                        value: hr > 12 ? hr - 12 : hr,
+                        value: hr,
                         progress: h_progress
                     }, {
                         label: "m",
@@ -518,9 +512,6 @@
                     }, {
                         label: "s",
                         value: sec < 10 ? "0" + sec : sec
-                    }, {
-                        label: "ap",
-                        value: hr > 12 ? "下午" : "上午"
                     }];
                     // flush out the timeouts  
                     this.ringTimeouts.forEach(t => {
