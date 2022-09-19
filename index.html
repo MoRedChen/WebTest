@@ -109,6 +109,12 @@
             }
         }
         
+        .form-output {
+            width: 70%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
         .btn-form {
             margin-top: 50px;
             background: #878787;
@@ -171,8 +177,8 @@
                         <input type="number" id="two" class="form-control" placeholder="請輸入大於1的整數">
                     </div>
                     <div class="form-row">
-                        <label for="output">結果：</label>
-                        <input type="text" id="output" class="form-control" disabled>
+                        <label>結果：</label>
+                        <label id="output" class="form-output">????%</label>
                     </div>
                     <button class="btn btn-form" onclick="cal()">計算</button>
                 </div>
@@ -188,12 +194,12 @@
             probability = document.getElementById("one").value;
             times = document.getElementById("two").value;
             output = 1 - Math.pow((1 - probability), times);
-            document.getElementById("output").value = output;
+            document.getElementById("output").innerHTML = (output * 100).toFixed(2) + "%";
         } else {
             probability = document.getElementById("one").value;
             expect = document.getElementById("two").value;
             output = Math.log(1 - expect) / Math.log(1 - probability);
-            document.getElementById("output").value = output;
+            document.getElementById("output").innerHTML = Math.ceil(output) + "次";
         }
     }
 
@@ -204,14 +210,14 @@
             document.getElementById("two").placeholder = "請輸入0~1的數值";
             document.getElementById("one").value = "";
             document.getElementById("two").value = "";
-            document.getElementById("output").value = "";
+            document.getElementById("output").innerHTML = "????次";
         } else {
             document.getElementById("title").innerHTML = "機率計算";
             document.getElementById("label-two").innerHTML = "次數：";
             document.getElementById("two").placeholder = "請輸入大於1的整數";
             document.getElementById("one").value = "";
             document.getElementById("two").value = "";
-            document.getElementById("output").value = "";
+            document.getElementById("output").innerHTML = "????%";
         }
     }
 </script>
