@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>110-2 Curriculum</title>
+    <title>Probability Calculation</title>
     <link href="favicon.png" rel="icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
@@ -15,552 +15,205 @@
         <![endif]-->
     <style>
         * {
-            border: 0;
             box-sizing: border-box;
+        }
+        
+        html {
+            width: 100%;
             margin: 0;
             padding: 0;
-        }
-        
-        .progress-clock {
-            display: grid;
-            justify-content: center;
-            align-content: center;
-            position: relative;
-            text-align: center;
-            height: 80px;
-        }
-        
-        .progress-clock__time-date,
-        .progress-clock__time-digit,
-        .progress-clock__time-colon,
-        .progress-clock__time-ampm {
-            transition: color 0.2s linear;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-        
-        .progress-clock__time-date,
-        .progress-clock__time-digit {
-            background: transparent;
-        }
-        
-        .progress-clock__time-date,
-        .progress-clock__time-ampm {
-            grid-column: 1 / 6;
-        }
-        
-        .progress-clock__time-date {
-            font-size: 18px;
-            line-height: 1.33;
-        }
-        
-        .progress-clock__time-digit,
-        .progress-clock__time-colon {
-            font-size: 20px;
-            font-weight: 400;
-            grid-row: 2;
-        }
-        
-        .progress-clock__time-colon {
-            line-height: 1.275;
-        }
-        
-        [data-group]:focus {
-            outline: transparent;
-        }
-        
-        [data-units] {
-            transition: opacity 0.2s linear;
-        }
-        
-        [data-group="d"]:focus,
-        [data-group="d"]:hover {
-            color: hsl(333, 90%, 55%);
-        }
-        
-        [data-group="h"]:focus,
-        [data-group="h"]:hover {
-            color: hsl(33, 90%, 55%);
-        }
-        
-        [data-group="m"]:focus,
-        [data-group="m"]:hover {
-            color: hsl(213, 90%, 55%);
-        }
-        
-        [data-group="s"]:focus,
-        [data-group="s"]:hover {
-            color: hsl(273, 90%, 55%);
+            height: 100%;
         }
         
         body {
-            background: linear-gradient(-45deg, #E4BDD8 0%, #BEECF5 100%);
-            height: 800px;
-        }
-        
-        .curriculum {
-            background-color: rgba(255, 255, 255, 0.3);
-            width: 100%;
-            height: 650px;
-            border-radius: 20px;
-            padding: 10px;
-            margin-top: 20px;
-        }
-        
-        .week-title {
-            height: 60px;
-        }
-        
-        h2 {
-            font-size: 20px;
-            text-align: center;
-        }
-        
-        .col-sm-2 {
-            padding-left: 5px;
-            padding-right: 5px;
-        }
-        
-        a {
-            background-color: rgba(255, 255, 255, 1);
-            text-decoration: none;
-        }
-        
-        a:hover {
-            background-color: rgba(255, 255, 255, 0.3);
-            text-decoration: none;
-        }
-        
-        .caption {
-            text-align: center;
-        }
-        
-        .thumbnail {
-            background-color: rgba(255, 255, 255, 1);
-            margin-bottom: 10px;
-            border: none;
-            transition: 0.3s;
-        }
-        
-        .c-t {
-            font-size: 15px;
-            height: 50px;
-            padding-left: 10px;
-        }
-        
-        .c-t p {
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(45deg, rgba(255, 166, 0, 1) 14.7%, rgba(255, 99, 97, 1) 73%);
+            background-size: 200% 200%;
+            animation: gradient 15s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 32px;
         }
         
-        .c-name {
-            font-size: 18px;
+        h1 {
+            margin-bottom: 30px;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 32px;
+            color: #26384e;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+            transition-delay: 0.2s;
+            overflow: hidden;
+            max-width: 100%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-bottom: 30px;
         }
         
-        .c-teacher {
-            font-size: 16px;
+        @media screen and (max-width: 520px) {
+            h1 {
+                font-size: 20px;
+                line-height: 24px;
+                margin-bottom: 26px;
+            }
         }
         
-        .c-n {
+        .form-row {
+            display: flex;
             height: 50px;
-            background-color: rgba(255, 255, 255, 0.2);
+            padding: 5px;
         }
         
-        .c-2 {
-            height: 110px;
+        label {
+            font-size: 16px;
+            line-height: 24px;
+            color: #889db8;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+            transition-delay: 0.3s;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 25%;
         }
         
-        .c-3 {
-            height: 170px;
+        @media screen and (max-width: 520px) {
+            label {
+                font-size: 14px;
+                line-height: 20px;
+            }
         }
         
-        hr {
-            margin: 5px 0 10px 0;
+        .form-control {
+            background-color: #ffffff;
+            color: #889db8;
+            font-size: 14px;
+            border: 1px solid #889db8;
+            height: 28px;
+            width: 70%;
+            margin-top: 18px;
         }
         
-        .item-center {
-            display: grid;
-            place-items: center;
+        @media screen and (max-width: 520px) {
+            .form-control {
+                font-size: 12px;
+                height: 24px;
+            }
+        }
+        
+        .btn-form {
+            margin-top: 50px;
+            background: #878787;
+            color: #ffffff;
+            font-weight: bold;
+            border: none;
+            width: 100%;
+        }
+        
+        .btn-switch {
+            margin: 0px;
+            background-image: linear-gradient(45deg, rgba(255, 166, 0, 1) 14.7%, rgba(255, 99, 97, 1) 73%);
+            color: #ffffff;
+            font-weight: bold;
+            border: none;
+            width: 60px;
+        }
+        
+        .card-container {
+            background: #ffffff;
+            width: 100%;
+            max-width: 420px;
+            height: 100%;
+            max-height: 600px;
+            border-radius: 10px;
+        }
+        
+        .input-item {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            background-color: #ffffff;
+        }
+        
+        .input-item-content {
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
-        <div class="row">
-            <div class="curriculum">
-                <div class="col-xs-12 col-sm-2">
-                    <div id="clock" class="progress-clock">
-                        <button class="progress-clock__time-date" data-group="d" type="button">  
-                                <small data-unit="mo">1</small>/<small data-unit="d">1</small> (<small data-unit="w">日</small>)
-                        </button>
-                        <button class="progress-clock__time-digit" data-unit="h" data-group="h" type="button">12</button>
-                        <span class="progress-clock__time-colon">:</span>
-                        <button class="progress-clock__time-digit" data-unit="m" data-group="m" type="button">00</button>
-                        <span class="progress-clock__time-colon">:</span>
-                        <button class="progress-clock__time-digit" data-unit="s" data-group="s" type="button">00</button>
+    <div class="card-container">
+        <div class="input-item">
+            <div class="input-item-content">
+                <h1 id="title">機率計算</h1>
+                <button class="btn btn-switch" onclick="switch_mode()">切換</button>
+                <div class="form-group">
+                    <div class="form-row">
+                        <label for="one">機率：</label>
+                        <input type="number" id="one" class="form-control" placeholder="請輸入0~1的數值">
                     </div>
-                    <div href="#" class="thumbnail c-t">
-                        <p>第一節</p>
-                        <p>08:10 ~ 09:00</p>
+                    <div class="form-row">
+                        <label for="two" id="label-two">次數：</label>
+                        <input type="number" id="two" class="form-control" placeholder="請輸入大於1的整數">
                     </div>
-                    <div href="#" class="thumbnail c-t">
-                        <p>第二節</p>
-                        <p>09:10 ~ 10:00</p>
+                    <div class="form-row">
+                        <label for="output">結果：</label>
+                        <input type="text" id="output" class="form-control" disabled>
                     </div>
-                    <div href="#" class="thumbnail c-t">
-                        <p>第三節</p>
-                        <p>10:10 ~ 11:00</p>
-                    </div>
-                    <div href="#" class="thumbnail c-t">
-                        <p>第四節</p>
-                        <p>11:10 ~ 12:00</p>
-                    </div>
-                    <hr>
-                    <div href="#" class="thumbnail c-t">
-                        <p>第五節</p>
-                        <p>13:30 ~ 14:20</p>
-                    </div>
-                    <div href="#" class="thumbnail c-t">
-                        <p>第六節</p>
-                        <p>14:30 ~ 15:20</p>
-                    </div>
-                    <div href="#" class="thumbnail c-t">
-                        <p>第七節</p>
-                        <p>15:30 ~ 16:20</p>
-                    </div>
-                    <div href="#" class="thumbnail c-t">
-                        <p>第八節</p>
-                        <p>16:30 ~ 17:20</p>
-                    </div>
-                    <div href="#" class="thumbnail c-t">
-                        <p>第九節</p>
-                        <p>17:30 ~ 18:20</p>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-2">
-                    <div class="week-title">
-                        <h2>星期一 (Mon)</h2>
-                    </div>
-                    <div href="#" class="thumbnail c-n">
-                    </div>
-                    <div href="#" class="thumbnail c-n">
-                    </div>
-                    <div href="#" class="thumbnail c-n">
-                    </div>
-                    <div href="#" class="thumbnail c-n">
-                    </div>
-                    <hr>
-                    <a href="https://meet.google.com/xro-wuto-zhq" class="thumbnail c-3 item-center">
-                        <div class="caption">
-                            <p class="c-name">資料庫管理</p>
-                            <p class="c-teacher">曾守正</p>
-                        </div>
-                    </a>
-                    <a href="https://meet.google.com/pnh-bffg-rgp" class="thumbnail c-2 item-center">
-                        <div class="caption">
-                            <p class="c-name">企業倫理與永續發展</p>
-                            <p class="c-teacher">林君瀌</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-xs-12 col-sm-2">
-                    <div class="week-title">
-                        <h2>星期二 (Tue)</h2>
-                    </div>
-                    <div href="#" class="thumbnail c-n">
-                    </div>
-                    <div href="#" class="thumbnail c-n">
-                    </div>
-                    <div href="#" class="thumbnail c-n">
-                    </div>
-                    <div href="#" class="thumbnail c-n">
-                    </div>
-                    <hr>
-                    <a href="https://meet.google.com/awa-pjkr-mys" class="thumbnail c-3 item-center">
-                        <div class="caption">
-                            <p class="c-name">統計學(二)</p>
-                            <p class="c-teacher">陳慶文</p>
-                        </div>
-                    </a>
-                    <div href="#" class="thumbnail c-n">
-                    </div>
-                    <div href="#" class="thumbnail c-n">
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-2">
-                    <div class="week-title">
-                        <h2>星期三 (Wed)</h2>
-                    </div>
-                    <div href="#" class="thumbnail c-n">
-                    </div>
-                    <div href="#" class="thumbnail c-n">
-                    </div>
-                    <div href="#" class="thumbnail c-n">
-                    </div>
-                    <div href="#" class="thumbnail c-n">
-                    </div>
-                    <hr>
-                    <div href="#" class="thumbnail c-n">
-                    </div>
-                    <div href="#" class="thumbnail c-n">
-                    </div>
-                    <a href="https://meet.google.com/faj-kyyi-sjh" class="thumbnail c-3 item-center">
-                        <div class="caption">
-                            <p class="c-name">金融市場實務 </p>
-                            <p class="c-teacher">宋雲豪</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-xs-12 col-sm-2">
-                    <div class="week-title">
-                        <h2>星期四 (Thu)</h2>
-                    </div>
-                    <div href="#" class="thumbnail c-n">
-                    </div>
-                    <div href="#" class="thumbnail c-n">
-                    </div>
-                    <a href="https://meet.google.com/maz-egvy-hyr" class="thumbnail c-2 item-center">
-                        <div class="caption">
-                            <p class="c-name">博雅(社會)科技與社會</p>
-                            <p class="c-teacher">郭文正</p>
-                        </div>
-                    </a>
-                    <hr>
-                    <div href="#" class="thumbnail c-n">
-                    </div>
-                    <div href="#" class="thumbnail c-n">
-                    </div>
-                    <a href="https://meet.google.com/ont-bpgw-pir" class="thumbnail c-2 item-center">
-                        <div class="caption">
-                            <p class="c-name">體育(四)-籃球</p>
-                            <p class="c-teacher">屈生東</p>
-                        </div>
-                    </a>
-                    <div href="#" class="thumbnail c-n">
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-2">
-                    <div class="week-title">
-                        <h2>星期五 (Fri)</h2>
-                    </div>
-                    <div href="#" class="thumbnail c-n">
-                    </div>
-                    <div href="#" class="thumbnail c-n">
-                    </div>
-                    <a href="https://meet.google.com/xwn-rrvv-gdt" class="thumbnail c-2 item-center">
-                        <div class="caption">
-                            <p class="c-name">實用英文</p>
-                            <p class="c-teacher">吳昌恂</p>
-                        </div>
-                    </a>
-                    <hr>
-                    <a href="https://meet.google.com/yto-iktf-bxo" class="thumbnail c-3 item-center">
-                        <div class="caption">
-                            <p class="c-name">軟體開發實務</p>
-                            <p class="c-teacher">胡中興</p>
-                        </div>
-                    </a>
-                    <div href="#" class="thumbnail c-n">
-                    </div>
-                    <div href="#" class="thumbnail c-n">
-                    </div>
+                    <button class="btn btn-form" onclick="cal()">計算</button>
                 </div>
             </div>
-
-
         </div>
-        <!-- Row -->
     </div>
-    <!--Container -->
 
 
-
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script>
-        window.addEventListener("DOMContentLoaded", () => {
-            const clock = new ProgressClock("#clock");
-        });
-        class ProgressClock {
-            constructor(qs) {
-                this.el = document.querySelector(qs);
-                this.time = 0;
-                this.updateTimeout = null;
-                this.ringTimeouts = [];
-                this.update();
-            }
-            getDayOfWeek(day) {
-                switch (day) {
-                    case 1:
-                        return "一";
-                    case 2:
-                        return "二";
-                    case 3:
-                        return "三";
-                    case 4:
-                        return "四";
-                    case 5:
-                        return "五";
-                    case 6:
-                        return "六";
-                    default:
-                        return "日";
-                }
-            }
-            getMonthInfo(mo, yr) {
-                switch (mo) {
-                    case 1:
-                        return {
-                            name: "2",
-                            days: yr % 4 === 0 ? 29 : 28
-                        };
-                    case 2:
-                        return {
-                            name: "3",
-                            days: 31
-                        };
-                    case 3:
-                        return {
-                            name: "4",
-                            days: 30
-                        };
-                    case 4:
-                        return {
-                            name: "5",
-                            days: 31
-                        };
-                    case 5:
-                        return {
-                            name: "6",
-                            days: 30
-                        };
-                    case 6:
-                        return {
-                            name: "7",
-                            days: 31
-                        };
-                    case 7:
-                        return {
-                            name: "8",
-                            days: 31
-                        };
-                    case 8:
-                        return {
-                            name: "9",
-                            days: 30
-                        };
-                    case 9:
-                        return {
-                            name: "10",
-                            days: 31
-                        };
-                    case 10:
-                        return {
-                            name: "11",
-                            days: 30
-                        };
-                    case 11:
-                        return {
-                            name: "12",
-                            days: 31
-                        };
-                    default:
-                        return {
-                            name: "1",
-                            days: 31
-                        };
-                }
-            }
-            update() {
-                this.time = new Date();
-                if (this.el) {
-                    // date and time  
-                    const dayOfWeek = this.time.getDay();
-                    const year = this.time.getFullYear();
-                    const month = this.time.getMonth();
-                    const day = this.time.getDate();
-                    const hr = this.time.getHours();
-                    const min = this.time.getMinutes();
-                    const sec = this.time.getSeconds();
-                    const dayOfWeekName = this.getDayOfWeek(dayOfWeek);
-                    const monthInfo = this.getMonthInfo(month, year);
-                    const m_progress = sec / 60;
-                    const h_progress = (min + m_progress) / 60;
-                    const d_progress = (hr + h_progress) / 24;
-                    const mo_progress = ((day - 1) + d_progress) / monthInfo.days;
-                    const units = [{
-                        label: "w",
-                        value: dayOfWeekName
-                    }, {
-                        label: "mo",
-                        value: monthInfo.name,
-                        progress: mo_progress
-                    }, {
-                        label: "d",
-                        value: day,
-                        progress: d_progress
-                    }, {
-                        label: "h",
-                        value: hr < 10 ? "0" + hr : hr,
-                        progress: h_progress
-                    }, {
-                        label: "m",
-                        value: min < 10 ? "0" + min : min,
-                        progress: m_progress
-                    }, {
-                        label: "s",
-                        value: sec < 10 ? "0" + sec : sec
-                    }];
-                    // flush out the timeouts  
-                    this.ringTimeouts.forEach(t => {
-                        clearTimeout(t);
-                    });
-                    this.ringTimeouts = [];
-                    // update the display  
-                    units.forEach(u => {
-                        // rings  
-                        const ring = this.el.querySelector(`[data-ring="${u.label}"]`);
-                        if (ring) {
-                            const strokeDashArray = ring.getAttribute("stroke-dasharray");
-                            const fill360 = "progress-clock__ring-fill--360";
-                            if (strokeDashArray) {
-                                // calculate the stroke  
-                                const circumference = +strokeDashArray.split(" ")[0];
-                                const strokeDashOffsetPct = 1 - u.progress;
-                                ring.setAttribute(
-                                    "stroke-dashoffset",
-                                    strokeDashOffsetPct * circumference
-                                );
-                                // add the fade-out transition, then remove it  
-                                if (strokeDashOffsetPct === 1) {
-                                    ring.classList.add(fill360);
-                                    this.ringTimeouts.push(
-                                        setTimeout(() => {
-                                            ring.classList.remove(fill360);
-                                        }, 600)
-                                    );
-                                }
-                            }
-                        }
-                        // digits  
-                        const unit = this.el.querySelector(`[data-unit="${u.label}"]`);
-                        if (unit)
-                            unit.innerText = u.value;
-                    });
-                }
-                clearTimeout(this.updateTimeout);
-                this.updateTimeout = setTimeout(this.update.bind(this), 1e3);
-            }
-        }
-    </script>
 </body>
+<script>
+    function cal() {
+        if (document.getElementById("title").innerHTML == "機率計算") {
+            probability = document.getElementById("one").value;
+            times = document.getElementById("two").value;
+            output = 1 - Math.pow((1 - probability), times);
+            document.getElementById("output").value = output;
+        } else {
+            probability = document.getElementById("one").value;
+            expect = document.getElementById("two").value;
+            output = Math.log(1 - expect) / Math.log(1 - probability);
+            document.getElementById("output").value = output;
+        }
+    }
+
+    function switch_mode() {
+        if (document.getElementById("title").innerHTML == "機率計算") {
+            document.getElementById("title").innerHTML = "次數計算";
+            document.getElementById("label-two").innerHTML = "期望：";
+            document.getElementById("two").placeholder = "請輸入0~1的數值";
+            document.getElementById("one").value = "";
+            document.getElementById("two").value = "";
+            document.getElementById("output").value = "";
+        } else {
+            document.getElementById("title").innerHTML = "機率計算";
+            document.getElementById("label-two").innerHTML = "次數：";
+            document.getElementById("two").placeholder = "請輸入大於1的整數";
+            document.getElementById("one").value = "";
+            document.getElementById("two").value = "";
+            document.getElementById("output").value = "";
+        }
+    }
+</script>
 
 </html>
