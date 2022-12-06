@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang=""><head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>專題測試</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<style>@import"http://fonts.googleapis.com/earlyaccess/notosanstc.css";*{font-family:Noto Sans TC,sans-serif,Helvetica,Arial}</style><link rel="stylesheet" href="styles.3356c79de35ab9d9.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.3356c79de35ab9d9.css"></noscript></head>
+
+<body>
+
+
+    <app-root></app-root>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- navbar 導覽列-->
+    <script>
+        $('#topheader .navbar-nav a').on('click', function() {
+            $('#topheader .navbar-nav').find('li.active').removeClass('active');
+            $(this).parent('li').addClass('active');
+        });
+
+        $(function() {
+            $('.navbar-toggle').on('click', switchNav)
+
+            function switchNav() {
+                $('.my-navbar').toggleClass('open');
+            }
+
+        })
+    </script>
+    <script>
+        $(function() {
+            $(window).scroll(function() {
+                var y = $(this).scrollTop();
+                if (y > 300) {
+                    $('#monitor').addClass('animate');
+                    $('#phone').addClass('animate');
+                };
+
+            });
+        });
+    </script>
+<script src="runtime.031a281078bcbe9e.js" type="module"></script><script src="polyfills.d53955c8b267c37c.js" type="module"></script><script src="main.6e3ca381f9b26842.js" type="module"></script>
+
+</body></html>
